@@ -3,6 +3,9 @@ import { Link, NavLink, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import '../style/login.css';
 import logo from '../../src/assets/m.png'
+import {Base_url} from './../config'
+
+
 
 
 const Login = () => {
@@ -13,7 +16,7 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post('https://moviesphere-backend-3.onrender.com/login', { email, password });
+            const res = await axios.post(`${Base_url}/login`, { email, password });
             alert(res.data.msg);
             localStorage.setItem("Users", JSON.stringify(res.data.user));
             navigate('/home'); 

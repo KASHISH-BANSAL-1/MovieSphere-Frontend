@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import {  NavLink, useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import '../style/signup.css'; // Assuming you have a CSS file for styling
-import logo from '../../src/assets/m.png'
+import '../style/signup.css'; 
+import logo from '../../src/assets/m.png';
 
+import {Base_url} from './../config'
 const Signup = () => {
     const [fullname, setFullname] = useState('');
     const [email, setEmail] = useState('');
@@ -13,9 +14,9 @@ const Signup = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post('https://moviesphere-backend-3.onrender.com/signup', { fullname, email, password });
+            const res = await axios.post(`${Base_url}/signup`, { fullname, email, password });
             alert(res.data.msg);
-            navigate('/login'); // Redirect to home page after successful signup
+            navigate('/login'); 
         } catch (error) {
             console.error(error);
             alert(error.response.data.msg);
