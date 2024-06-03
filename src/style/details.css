@@ -1,0 +1,29 @@
+.det{
+    display: flex;
+    color: aliceblue;
+    padding: 15px;
+    background-color: #212020;
+    overflow: hidden;
+    height: 70vh;
+    width: 50vw;
+    margin-top: 100px;
+    align-items: center;
+    margin-left: 350px;
+}
+.imgg{
+    margin-top: 50px;
+    width: 40%;
+    height: 400px;
+}
+.info{
+    margin-left: 50px;
+    margin-bottom: 60px;
+}
+.info h1{
+    font-size: 2rem;
+    
+}
+.info div{
+    font-weight: bolder;
+    height: 40px;
+}
