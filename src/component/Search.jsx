@@ -9,7 +9,7 @@ const Search = () => {
     const [movies, setMovies] = useState([]);
 
     const searchMovies = async () => {
-        const res = await axios.get(`http://www.omdbapi.com/?i=tt3896198&apikey=d5a5a1ab&s=${query}`);
+        const res = await axios.get(`https://www.omdbapi.com/?i=tt3896198&apikey=d5a5a1ab&s=${query}`);
         setMovies(res.data.Search || []);
     };
 

@@ -12,7 +12,7 @@ const MovieCard = ({ movie }) => {
     useEffect(() => {
         const fetchRating = async () => {
             try {
-                const res = await axios.get(`http://www.omdbapi.com/?i=${movie.imdbID}&apikey=d5a5a1ab`);
+                const res = await axios.get(`https://www.omdbapi.com/?i=${movie.imdbID}&apikey=d5a5a1ab`);
                 setRating(res.data.imdbRating);
             } catch (error) {
                 console.error("Error fetching movie rating:", error);
