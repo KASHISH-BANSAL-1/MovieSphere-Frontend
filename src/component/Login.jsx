@@ -13,7 +13,7 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post('http://localhost:8002/login', { email, password });
+            const res = await axios.post('https://moviesphere-backend-2.onrender.com/login', { email, password });
             alert(res.data.msg);
             localStorage.setItem("Users", JSON.stringify(res.data.user));
             navigate('/home'); // Redirect to home page after successful login

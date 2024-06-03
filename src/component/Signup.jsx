@@ -13,7 +13,7 @@ const Signup = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post('http://localhost:8002/signup', { fullname, email, password });
+            const res = await axios.post('https://moviesphere-backend-2.onrender.com/signup', { fullname, email, password });
             alert(res.data.msg);
             navigate('/login'); // Redirect to home page after successful signup
         } catch (error) {
