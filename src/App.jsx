@@ -5,6 +5,7 @@ import Login from './component/Login'
 import MovieDetails from './component/Moviedetails'
 import MovieListPage from './pages/MovieListPage'
 import Signup from './component/Signup'
+import Start from './component/Start'
 
 function App() {
   return (
@@ -12,7 +13,9 @@ function App() {
       <Routes>
       <Route exact path="/home" element={<Home/>} />
       <Route path="/login" element={<Login/>} />
-      <Route path="/" element={<Signup/>} />
+      <Route path="/" element={<Start/>} />
+      <Route path="/signup" element={<Signup/>} />
+
 
                 <Route path="/movies/:id" element={<MovieDetails/>} />
                 <Route path="/lists/:id" element={<MovieListPage/>} />
